@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Rank = () => {
+const Rank = ({ name, entries }) => {
   return (
     <div>
-    	<p className='f2'>{'Hi! User, your rank is #5'}</p>   
+      <p className='f2'>{`Hi! ${name}, your entries is ${entries}`}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Rank
+export default Rank;

@@ -1,11 +1,29 @@
-import React from 'react'
+import React from 'react';
+import './FaceRecognition.css';
 
-const FaceRecognition=() => {
-  return(
-		<div>
-			<img src={'https://clarifai.com/cms-assets/20180320221615/face-001.jpg'} alt='face' style={{width:'500px'}}/>
-		</div>  
-  )
-}
+const FaceRecognition = ({ imageUrl, box }) => {
+  return (
+    <div className='center ma'>
+      <div className='absolute mt2'>
+        <img
+          id='inputimage'
+          src={imageUrl}
+          alt=''
+          width='500px'
+          height='auto'
+        />
+        <div
+          className='bounding-box'
+          style={{
+            top: box.topRow,
+            right: box.rightCol,
+            left: box.leftCol,
+            bottom: box.bottomRow,
+          }}
+        ></div>
+      </div>
+    </div>
+  );
+};
 
-export default FaceRecognition
+export default FaceRecognition;
